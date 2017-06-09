@@ -15,16 +15,14 @@ AFRAME.registerComponent('breathe', {
     },
     tick: function (time, timeDelta) {
         var pi = Math.PI;
-        var subtime = (time / 100);
+        var subtime = (time / 1000);
         this.mesh.scale.x =
-            this.original.x + Math.sin(subtime + 0.0 * pi) / 300;
+            this.original.x + Math.sin(subtime * 1 + 0.0 * pi) / 500;
         this.mesh.scale.y =
-            this.original.y + Math.sin(subtime + 0.3 * pi) / 100;
+            this.original.y + Math.sin(subtime / 2 + 0.3 * pi) / 700;
         this.mesh.scale.z =
-            this.original.z + Math.sin(subtime + 0.6 * pi) / 200;
-        if (!(time % 10)) {
-            console.log(time, timeDelta);
-        }
+            this.original.z + Math.sin(subtime / 3 + 0.6 * pi) / 1000;
+        //console.log(time, timeDelta);
     },
     remove: function () {
     }

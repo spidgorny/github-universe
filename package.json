@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo --live --verbose --port 3000 --open",
+    "start": "budo --live --verbose --port 3000 --open --wg '**/*.{html,css,js}'",
     "deploy": "ghpages",
     "ghpages": "ghpages"
   },
